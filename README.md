@@ -15,6 +15,8 @@ Install with Python 3.9+ and [pipx](https://pipx.pypa.io/):
 pipx install git+https://github.com/itzjk/attr-drift.git
 ```
 
+From the root of a local clone, use `pipx install .` instead.
+
 Compare two local revisions:
 
 ```sh
