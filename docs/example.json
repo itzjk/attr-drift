@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "status": "differences",
+  "complete": true,
+  "before_oid": "b5875e181f97061c7535a60f7dd6d77ffac3de0f",
+  "after_oid": "f6cdf7bf96ef8689458afeae4d3b982bad809c58",
+  "before_tree": "510b2b4092a90fd50bf112a61cc748baece8ba1c",
+  "after_tree": "c8506b3099d704faa334485915f30fdf49603159",
+  "git_version": "git version 2.54.0",
+  "source_policy": {
+    "included": [
+      "versioned .gitattributes from each pinned tree"
+    ],
+    "excluded": [
+      "input repository info/attributes",
+      "global attributes",
+      "system attributes",
+      "working tree",
+      "index"
+    ],
+    "engine": "git check-attr --source with NUL input/output",
+    "values": "literal Git output; set, unset and unspecified can also be string values",
+    "objects": "local read-only alternates; lazy fetch and replacement objects disabled"
+  },
+  "attributes": [
+    "text",
+    "eol"
+  ],
+  "limits": {
+    "max_paths": 100000,
+    "max_bytes": 67108864,
+    "timeout_seconds": 30
+  },
+  "inventory": [
+    {
+      "path": ".gitattributes",
+      "status": "common",
+      "before": {
+        "mode": "100644",
+        "oid": "f9e337fe21186a247adb2d02ff60733274611077"
+      },
+      "after": {
+        "mode": "100644",
+        "oid": "c61b241eb497eb431df825841e808503145600e1"
+      },
+      "blob_changed": true
+    },
+    {
+      "path": "a.txt",
+      "status": "common",
+      "before": {
+        "mode": "100644",
+        "oid": "4a58007052a65fbc2fc3f910f2855f45a4058e74"
+      },
+      "after": {
+        "mode": "100644",
+        "oid": "4a58007052a65fbc2fc3f910f2855f45a4058e74"
+      },
+      "blob_changed": false
+    },
+    {
+      "path": "docs/b.txt",
+      "status": "common",
+      "before": {
+        "mode": "100644",
+        "oid": "65b2df87f7df3aeedef04be96703e55ac19c2cfb"
+      },
+      "after": {
+        "mode": "100644",
+        "oid": "65b2df87f7df3aeedef04be96703e55ac19c2cfb"
+      },
+      "blob_changed": false
+    },
+    {
+      "path": "protected/.gitattributes",
+      "status": "common",
+      "before": {
+        "mode": "100644",
+        "oid": "f9e337fe21186a247adb2d02ff60733274611077"
+      },
+      "after": {
+        "mode": "100644",
+        "oid": "f9e337fe21186a247adb2d02ff60733274611077"
+      },
+      "blob_changed": false
+    },
+    {
+      "path": "protected/c.txt",
+      "status": "common",
+      "before": {
+        "mode": "100644",
+        "oid": "af17f6cc87e4d5e4adec0018cbb73d3e2bd008c8"
+      },
+      "after": {
+        "mode": "100644",
+        "oid": "af17f6cc87e4d5e4adec0018cbb73d3e2bd008c8"
+      },
+      "blob_changed": false
+    },
+    {
+      "path": "stable.md",
+      "status": "common",
+      "before": {
+        "mode": "100644",
+        "oid": "2bf5ad0447d3370461c6f32a0a5bc8a3177376aa"
+      },
+      "after": {
+        "mode": "100644",
+        "oid": "2bf5ad0447d3370461c6f32a0a5bc8a3177376aa"
+      },
+      "blob_changed": false
+    }
+  ],
+  "differences": [
+    {
+      "path": "a.txt",
+      "blob_changed": false,
+      "changes": [
+        {
+          "attribute": "eol",
+          "before": "lf",
+          "after": "crlf"
+        }
+      ]
+    },
+    {
+      "path": "docs/b.txt",
+      "blob_changed": false,
+      "changes": [
+        {
+          "attribute": "eol",
+          "before": "lf",
+          "after": "crlf"
+        }
+      ]
+    }
+  ],
+  "omissions": [],
+  "summary": {
+    "inventoried_paths": 6,
+    "before_paths": 6,
+    "after_paths": 6,
+    "compared_paths": 6,
+    "added_paths": 0,
+    "removed_paths": 0,
+    "omitted_paths": 0,
+    "affected_paths": 2,
+    "affected_unchanged_blobs": 2,
+    "changed_attribute_pairs": 2,
+    "stable_paths": 4
+  },
+  "errors": []
+}
