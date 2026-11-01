@@ -1,11 +1,11 @@
 # Reproduce the unchanged-file case
 
-Run from a clone with Python 3.9+ and Git supporting `check-attr --source`:
+Run from a clone with Python 3.9+, Git supporting `check-attr --source`, and the CLI installed with `pipx install .`:
 
 ```sh
 python3 tools/make_demo.py /tmp/attr-drift-example
 git -C /tmp/attr-drift-example diff-tree --no-commit-id --name-only -r before after
-python3 -m attr_drift before after --repo /tmp/attr-drift-example --attrs text,eol
+attr-drift before after --repo /tmp/attr-drift-example --attrs text,eol
 ```
 
 The target directory must not exist. The generator creates six tracked paths, two commits and tags `before` and `after`. Only the root `.gitattributes` changes from `*.txt text eol=lf` to `*.txt text eol=crlf`. The nested rule under `protected/` stays on LF. The diff prints `.gitattributes`; attr-drift exits 1 and prints:
@@ -38,4 +38,4 @@ python3 -m unittest discover -s tests -v
 vhs docs/demo.tape
 ```
 
-The tape creates a new temporary fixture and runs the actual CLI, first showing the ordinary diff and then the effective attribute changes. It records a 10-25 second GIF at `docs/demo.gif`. VHS requires ttyd, FFmpeg and a compatible Chromium installation. Run it from the repository root. The CLI's exit 1 in the demo means differences were found.
+The tape creates a new temporary fixture and runs the installed `attr-drift` command. The loop starts halfway through the recording so its preview shows the complete report. The animation also shows the ordinary diff and both commands executing. It records a 10-25 second GIF at `docs/demo.gif`. VHS requires ttyd, FFmpeg and a compatible Chromium installation, plus `attr-drift` on `PATH`. Run it from the repository root. The CLI's exit 1 in the demo means differences were found.
